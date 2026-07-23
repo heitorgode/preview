@@ -39,6 +39,14 @@
                   "docs/v1/errors",
                   "docs/v1/swagger"
                 ]
+              },
+              {
+                "group": "Specification",
+                "pages": [
+                  "docs/v1/specification/overview",
+                  "docs/v1/specification/api-endpoints",
+                  "docs/v1/specification/appendix"
+                ]
               }
             ]
           },

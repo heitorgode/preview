@@ -1,0 +1,220 @@
+---
+title: Overview
+---
+
+The Xe Currency Data API is a REST-ful (or REST-like, depending how strictly you interpret REST) web-services API.
+
+## Schema
+
+- The API is accessed using the HTTPS protocol.
+- The API is accessed from the domain `xecdapi.xe.com`.
+- All data is sent and received in the JSON format by default. You can optionally specify XML or CSV formats instead.
+
+## Caching Data
+
+Caching of Xe Currency data is typically permitted at the 'Unlimited' package levels, unless you receive written permission from Xe. Caching permission is determined based on the intended use of the data. For more details please review the Xe Currency Data Feed API Agreement.
+
+## Authentication
+
+All requests to the API must be authenticated via HTTP Basic Access Authentication, which requires that a properly constructed "Authorization" header be included in your HTTP request. This header will need to include your Xe Currency Data API account ID and API key in an encoded form. Your account ID and API key will be provided to you when you sign up for the service. You can get more information on Basic Access Authentication at [en.wikipedia.org/wiki/Basic_access_authentication](http://en.wikipedia.org/wiki/Basic_access_authentication).
+
+Most modern programming languages and tools support this authentication method natively and take care of the details for you.
+
+### Authentication Example Using the "curl" Utility
+
+```sh
+curl –i -u account_id:api_key "https://xecdapi.xe.com/v1/account_info/"
+```
+
+Authenticating with invalid credentials will return `401 Unauthorized`:
+
+```sh
+curl –i –u bad_account_id:or_bad_api_key -i "https://xecdapi.xe.com/v1/account_info/"
+```
+
+```
+HTTP/1.1 401 Unauthorized
+{
+  "code":1,
+  "message": "Bad credentials",
+  "documentation_url": "https://xecdapi.xe.com/docs/v1/"
+}
+```
+
+### Failed Login Limit
+
+After detecting several requests that include your account ID but an invalid API key within a short period, the API will temporarily reject all authentication attempts from you (including ones with a valid API key) with the `403 Forbidden` error message:
+
+```sh
+curl –i -u account_id:bad_api_key -i "https://xecdapi.xe.com/v1/account_info/"
+```
+
+```
+HTTP/1.1 403 Forbidden
+{
+  "code":2,
+  "message": "Maximum number of login attempts exceeded. Please try again later.",
+  "documentation_url": "https://xecdapi.xe.com/docs/v1/"
+}
+```
+
+## Specifying the API Version
+
+You specify the version of the API that you wish to access by including it in the URI as follows:
+
+```
+https://xecdapi.xe.com/v{version_no}/...
+```
+
+Where `{version_no}` is an integer that identifies the version number that you wish to access.
+
+Example:
+
+```
+https://xecdapi.xe.com/v1/account_info/
+```
+
+## Specifying the Data Format
+
+By default, the API returns data in the JSON format. If you wish to explicitly specify the format, or request a different format, you can do so in the URI as follows:
+
+```
+https://xecdapi.xe.com/v1/{endpoint}{.format}/...
+```
+
+Where `{endpoint}` is the specific API endpoint (data) you are requesting and `{.format}` indicates the format in which you would like the data to be returned. Possible values for `{.format}` are `.json`, `.xml`, `.csv`. Again, if you do not include `{.format}`, the data will be returned in the JSON format by default.
+
+## Timestamp (Date and Time) Format
+
+All timestamps returned in the body of the API responses are in the following ISO 8601 format:
+
+```
+YYYY-MM-DDThh:mm:ssZ
+```
+
+The "Z" at the end indicates that this is a UTC time.
+
+If you have a Daily package and you have specified a preferred Lock-In time and Time Zone in your agreement then the API will return data based on these settings in UTC time.
+
+## Package Limits
+
+The number of API rate requests you get is based on the service package you selected at the time of sign up.
+
+- **Lite** package level: provides you with 10,000 API rate requests a month.
+- **Best Value** package level: provides you with 30,000 API rate requests a month.
+- **Prime** package level: provides you with 100,000 API rate requests a month.
+- **Infinite** package level: provides you with Unlimited API rate requests a month.
+
+Each rate returned is considered one API request towards your monthly package limit. You can request multiple rates in a single query.
+
+For example: Convert $1,500 From USD to CAD and GBP will count as two rate requests towards your monthly package limit as it contains two counter currencies (CAD and GBP).
+
+When you have used your monthly package allowance, your access will be blocked until your new monthly access period begins.
+
+You can check your current package limit status by using the `account_info` API endpoint without impacting your API request count.
+
+Once you hit your package limit you will receive an error response:
+
+```
+HTTP/1.1 403 Forbidden
+Status: 403 Forbidden
+X-RateLimit-Limit: 900
+X-RateLimit-Remaining: 851
+X-RateLimit-Reset: 1372700873
+{
+  "code":3,
+  "message": "API package limit reached.",
+  "documentation_url": "https://xecdapi.xe.com/docs/v1/"
+}
+```
+
+### Package Limit Alerts
+
+When you are nearing your package limit for the current month Xe will attempt to send you email alerts. Emails will be sent once you've reached 75%, 90% and 100% of your monthly package allowance.
+
+## Usage Restriction
+
+All requests made to the API are limited over a time period known as the usage restriction window. This is done to ensure reasonable usage and to potentially prevent excessive requests on the network due to technical errors.
+
+You can check the returned HTTP headers of any API request to see your current usage restriction status:
+
+```sh
+curl –i -u account_id:api_key -i "https://xecdapi.xe.com/v1/convert_to.json/?to=USD&from=CAD&amount=1000.00"
+```
+
+```
+HTTP/1.1 200 OK
+Status: 200 OK
+X-RateLimit-Limit: 900
+X-RateLimit-Remaining: 851
+X-RateLimit-Reset: 1372700873
+```
+
+The headers tell you everything you need to know about your current rate limit status:
+
+| Header Name | Description |
+| --- | --- |
+| `X-RateLimit-Limit` | The maximum number of requests that you are permitted to make per usage restriction window. |
+| `X-RateLimit-Remaining` | The number of requests remaining in the current usage restriction window. |
+| `X-RateLimit-Reset` | The time at which the current usage restriction window resets in UTC epoch seconds. |
+
+If you need the time in a different format, any modern programming language can get the job done. For example, if you open up the console on your web browser, you can easily get the reset time as a JavaScript Date object.
+
+```js
+new Date(1372700873 * 1000) // => Mon Jul 01 2013 13:47:53 GMT-0400 (EDT)
+```
+
+Once you go over the rate limit you will receive an error response:
+
+```
+HTTP/1.1 429 Too Many Requests
+Status: 429 Too Many Requests
+X-RateLimit-Limit: 900
+X-RateLimit-Remaining: 0
+X-RateLimit-Reset: 1377013266
+{
+  "code":4,
+  "message": "API request rate limit exceeded.",
+  "documentation_url": "https://xecdapi.xe.com/docs/v1/"
+}
+```
+
+## Conditional Requests
+
+Most responses return an `ETag` header. Many responses also return a `Last-Modified` header. You can use the values of these headers to make subsequent requests to those resources using the `If-None-Match` and `If-Modified-Since` headers, respectively. If the resource has not changed, the server will return a `304 Not Modified`.
+
+<Note>
+Making a conditional request and receiving a 304 response does not count against your API request count so we encourage you to use it whenever possible.
+</Note>
+
+```sh
+curl -i "https://xecdapi.xe.com/v1/convert_from/?to=*"
+```
+
+```
+HTTP/1.1 200 OK
+Cache-Control: private, max-age=60
+ETag: "644b5b0155e6404a9cc4bd9d8b1ae730"
+Last-Modified: Thu, 05 Jul 2012 15:31:30 GMT
+Status: 200 OK
+Vary: Accept, Authorization, Cookie
+X-RateLimit-Limit: 900
+X-RateLimit-Remaining: 851
+X-RateLimit-Reset: 1372700873
+```
+
+```sh
+curl -i "https://xecdapi.xe.com/v1/convert_from/?to=*" -H if-None-Match: "644b5b0155e6404a9cc4bd9d8b1ae730"
+```
+
+```
+HTTP/1.1 304 Not Modified
+Cache-Control: private, max-age=60
+ETag: "644b5b0155e6404a9cc4bd9d8b1ae730"
+Last-Modified: Thu, 05 Jul 2012 15:31:30 GMT
+Status: 304 Not Modified
+Vary: Accept, Authorization, Cookie
+X-RateLimit-Limit: 900
+X-RateLimit-Remaining: 851
+X-RateLimit-Reset: 1372700873
+```

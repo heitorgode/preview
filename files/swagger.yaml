@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: Xe Currency Data API
   description: Xe Currency Data - Integrate your application with our globally 
-    trusted currency data.</br></br> Get your free API credentials for 7 days <a
+    trusted currency data.<br/><br/> Get your free API credentials for 7 days <a
     href="https://xecd-account-api.xe.com/v2/newuser?type=freetrial/">here</a>
   version: '1.0'
 servers:
@@ -16,7 +16,7 @@ paths:
       - Account Information
       summary: This endpoint will return basic information for a specific 
         account.
-      description: Requires Headers "username" and "password"</br>
+      description: Requires Headers "username" and "password"<br/>
       responses:
         '200':
           description: Success
@@ -73,7 +73,7 @@ paths:
       - Currency Information
       summary: Access a list of all available currencies.
       description: This endpoint will return a list of all currencies, active 
-        and obsolete, available via the XE Currency Data Feed API.</br></br>If 
+        and obsolete, available via the XE Currency Data Feed API.<br/><br/>If 
         the obsolete optional parameter is included, then the list will contain 
         both active and obsolete currencies.
       parameters:
@@ -81,10 +81,10 @@ paths:
         in: query
         description: 'OPTIONAL – Comma separated list of ISO 4217 codes. This will
           limit the data returned to only those currencies that are specified. If
-          this parameter is omitted, this endpoint will return results for all currencies.</br></br>
+          this parameter is omitted, this endpoint will return results for all currencies.<br/><br/>
           It is a prefix match; you can provide it with one, two, or three characters
           and it will return a list of all the currencies with ISO 4217 codes that
-          match.</br></br> A list of acceptable ISO 4217 currency codes can be found
+          match.<br/><br/> A list of acceptable ISO 4217 currency codes can be found
           here: http://www.xe.com/iso4217.php'
         schema:
           type: string
@@ -97,7 +97,7 @@ paths:
       - name: language
         in: query
         description: 'OPTIONAL – Default is en. Specified as an RFC-1766-compliant
-          language tag.</br></br>Languages available: ar, de, en, es, fr, it, ja,
+          language tag.<br/><br/>Languages available: ar, de, en, es, fr, it, ja,
           pt, sv, zh-CN, zh-HK.'
         schema:
           type: string
@@ -391,21 +391,21 @@ paths:
         currencies.
       description: In the example below, the Convert FROM API query endpoint is 
         to convert from GBP to all available currencies (the asterisk * 
-        represents ALL currencies).</br><a 
+        represents ALL currencies).<br/><a 
         href="https://xecdapi.xe.com/v1/convert_from.csv/?from=GBP&to=*&amount=1">https://xecdapi.xe.com/v1/convert_from.csv/?from=GBP&to=*&amount=1</a>
       parameters:
       - name: from
         in: query
         description: OPTIONAL – Currency you want to convert from ISO code. Note
-          if this parameter is omitted, default is USD.</br>
+          if this parameter is omitted, default is USD.<br/>
         schema:
           type: string
       - name: to
         in: query
         description: 'Comma separated list of to currencies ISO 4217 codes.  This
           will limit the data returned to only those currencies you are interested
-          in. Use an asterisk * to convert all currencies.</br> Note: Obsolete currencies
-          are replaced by their successor currency.</br>'
+          in. Use an asterisk * to convert all currencies.<br/> Note: Obsolete currencies
+          are replaced by their successor currency.<br/>'
         required: true
         schema:
           type: string
@@ -413,7 +413,7 @@ paths:
         in: query
         description: OPTIONAL – This parameter can be used to specify the amount
           you want to convert, if an amount is not specified then 1 is 
-          assumed.</br>
+          assumed.<br/>
         schema:
           type: number
       - name: obsolete
@@ -427,11 +427,11 @@ paths:
         in: query
         description: OPTIONAL – Using one of the interval values below in your 
           call request will return rates for that specific 
-          interval.</br></br>"daily" - Returns the latest daily rate at your 
-          pre-chosen daily lock-in time</br>"hourly" - Returns rates for the 
-          most recent hour</br>"15minutes" - Returns rates for the most recent 
-          15 minute period</br>"minutely" - Returns rates for the most recent 
-          minute</br></br>If omitted, we’ll default to your fastest rate 
+          interval.<br/><br/>"daily" - Returns the latest daily rate at your 
+          pre-chosen daily lock-in time<br/>"hourly" - Returns rates for the 
+          most recent hour<br/>"15minutes" - Returns rates for the most recent 
+          15 minute period<br/>"minutely" - Returns rates for the most recent 
+          minute<br/><br/>If omitted, we’ll default to your fastest rate 
           frequency (i.e. live, 15-min, hourly, then daily) as per your 
           subscription plan.
         schema:
@@ -596,29 +596,29 @@ paths:
         currencies.
       description: In the example below, the Convert TO API query endpoint is to
         convert to GBP from all available currencies (the asterisk * represents 
-        ALL currencies).</br><a 
+        ALL currencies).<br/><a 
         href="https://xecdapi.xe.com/v1/convert_to.csv/?to=GBP&from=*&amount=1">https://xecdapi.xe.com/v1/convert_to.csv/?to=GBP&from=*&amount=1</a>
       parameters:
       - name: from
         in: query
         description: 'Comma separated list of to currencies ISO codes.  This will
           limit the data returned to only those currencies you are interested in.
-          Use an asterisk * to convert all currencies.</br> Note: Obsolete currencies
-          are replaced by their successor currency.</br>'
+          Use an asterisk * to convert all currencies.<br/> Note: Obsolete currencies
+          are replaced by their successor currency.<br/>'
         required: true
         schema:
           type: string
       - name: to
         in: query
         description: OPTIONAL - Currency you want to convert to ISO code.  Note 
-          if this parameter is omitted, default is USD.</br>
+          if this parameter is omitted, default is USD.<br/>
         schema:
           type: string
       - name: amount
         in: query
         description: OPTIONAL – This parameter can be used to specify the amount
           you want to convert, if an amount is not specified then 1 is 
-          assumed.</br>
+          assumed.<br/>
         schema:
           type: number
       - name: obsolete
@@ -632,11 +632,11 @@ paths:
         in: query
         description: OPTIONAL – Using one of the interval values below in your 
           call request will return rates for that specific 
-          interval.</br></br>"daily" - Returns the latest daily rate at your 
-          pre-chosen daily lock-in time</br>"hourly" - Returns rates for the 
-          most recent hour</br>"15minutes" - Returns rates for the most recent 
-          15 minute period</br>"minutely" - Returns rates for the most recent 
-          minute</br></br>If omitted, we’ll default to your fastest rate 
+          interval.<br/><br/>"daily" - Returns the latest daily rate at your 
+          pre-chosen daily lock-in time<br/>"hourly" - Returns rates for the 
+          most recent hour<br/>"15minutes" - Returns rates for the most recent 
+          15 minute period<br/>"minutely" - Returns rates for the most recent 
+          minute<br/><br/>If omitted, we’ll default to your fastest rate 
           frequency (i.e. live, 15-min, hourly, then daily) as per your 
           subscription plan.
         schema:
@@ -802,23 +802,23 @@ paths:
         rates are available for the past 7 days. Outside of 7 days you have 
         access to rates on the hour. Historical rates are available with all API
         packages. The time parameter (hh:mm) is applicable only for packages 
-        with access to rate updates faster than daily.</br>The endpoint returns 
+        with access to rate updates faster than daily.<br/>The endpoint returns 
         the historic rate for a single base currency and one or more counter 
-        currencies.</br></br><a 
-        href="https://xecdapi.xe.com/v1/historic_rate.csv/?from=USD&date=2011-03-05&to=CAD,EUR">https://xecdapi.xe.com/v1/historic_rate.csv/?from=USD&date=2011-03-05&to=CAD,EUR</a></br>
+        currencies.<br/><br/><a 
+        href="https://xecdapi.xe.com/v1/historic_rate.csv/?from=USD&date=2011-03-05&to=CAD,EUR">https://xecdapi.xe.com/v1/historic_rate.csv/?from=USD&date=2011-03-05&to=CAD,EUR</a><br/>
       parameters:
       - name: from
         in: query
         description: OPTIONAL – Currency you want to convert from ISO 
-          code.</br>Note if this parameter is omitted, default is USD.</br>
+          code.<br/>Note if this parameter is omitted, default is USD.<br/>
         schema:
           type: string
       - name: to
         in: query
-        description: 'Comma separated list of to currencies ISO 4217 codes.</br>This
+        description: 'Comma separated list of to currencies ISO 4217 codes.<br/>This
           will limit the data returned to only those currencies you are interested
-          in. Use an asterisk * to specify all currencies.</br> Note: Obsolete currencies
-          are replaced by their precursor or successor currency.</br>'
+          in. Use an asterisk * to specify all currencies.<br/> Note: Obsolete currencies
+          are replaced by their precursor or successor currency.<br/>'
         required: true
         schema:
           type: string
@@ -826,22 +826,22 @@ paths:
         in: query
         description: OPTIONAL – This parameter can be used to specify the amount
           you want to convert, if an amount is not specified then 1.00 is 
-          assumed.</br>
+          assumed.<br/>
         schema:
           type: number
       - name: date
         in: query
         description: OPTIONAL - UTC date should be in the form of YYYY-MM-DD, 
-          back to 1995-11-16.</br></br>If your account is registered to receive 
+          back to 1995-11-16.<br/><br/>If your account is registered to receive 
           daily rates only, the default time value used is 00:00 UTC, or your 
-          daily lock-in time if one is set.</br></br>Otherwise the endpoint will
+          daily lock-in time if one is set.<br/><br/>Otherwise the endpoint will
           return the latest rates for your chosen date.
         schema:
           type: string
       - name: time
         in: query
         description: OPTIONAL – *Time parameter is only applicable to packages 
-          with access to rate frequencies faster than daily.*</br></br>UTC time 
+          with access to rate frequencies faster than daily.*<br/><br/>UTC time 
           is in format of HH:MM
         schema:
           type: string
@@ -979,21 +979,21 @@ paths:
         counter currencies over a period of time.
       description: This endpoint returns a daily historic rate for a single base
         currency and one or more counter currencies over a period of 
-        time.</br></br><a 
-        href="https://xecdapi.xe.com/v1/historic_rate/period.csv/?from=USD&to=CAD&start_timestamp=2017-09-01&end_timestamp=2017-11-30&per_page=30">https://xecdapi.xe.com/v1/historic_rate/period.csv/?from=USD&to=CAD&start_timestamp=2017-09-01&end_timestamp=2017-11-30&per_page=30</a></br>
+        time.<br/><br/><a 
+        href="https://xecdapi.xe.com/v1/historic_rate/period.csv/?from=USD&to=CAD&start_timestamp=2017-09-01&end_timestamp=2017-11-30&per_page=30">https://xecdapi.xe.com/v1/historic_rate/period.csv/?from=USD&to=CAD&start_timestamp=2017-09-01&end_timestamp=2017-11-30&per_page=30</a><br/>
       parameters:
       - name: from
         in: query
         description: OPTIONAL – Currency you want to convert from ISO code. Note
-          if this parameter is omitted, default is USD.</br>
+          if this parameter is omitted, default is USD.<br/>
         schema:
           type: string
       - name: to
         in: query
-        description: 'Comma separated list of to currencies based on ISO 4217 codes.</br>This
+        description: 'Comma separated list of to currencies based on ISO 4217 codes.<br/>This
           will limit the data returned to only those currencies you are interested
-          in.</br> Note: Obsolete currencies are replaced by their precursor or successor
-          currency.</br>'
+          in.<br/> Note: Obsolete currencies are replaced by their precursor or successor
+          currency.<br/>'
         required: true
         schema:
           type: string
@@ -1001,21 +1001,21 @@ paths:
         in: query
         description: OPTIONAL – This parameter can be used to specify the amount
           you want to convert, if an amount is not specified then 1.00 is 
-          assumed.</br>
+          assumed.<br/>
         schema:
           type: number
       - name: start_timestamp
         in: query
         description: OPTIONAL - ISO 8601 timestamp in the format 
           yyyy-mm-ddThh:mm giving the UTC date and time of the start of the 
-          period for which you would like rates returned.</br></br>If you’re 
+          period for which you would like rates returned.<br/><br/>If you’re 
           querying using a daily interval, the time value will be ignored & the 
           endpoint will return rates at your preferred daily lock-in time 
           starting on the date specified in your request. If your account does 
           not have a preferred daily lock-in time then rates will return as of 
-          00:00 UTC.</br>If you’re querying using a faster rate interval than 
+          00:00 UTC.<br/>If you’re querying using a faster rate interval than 
           daily rate interval, your endpoint will return rates starting at 00:00
-          UTC if no time portion is specified.</br>
+          UTC if no time portion is specified.<br/>
         schema:
           type: string
       - name: end_timestamp
@@ -1025,11 +1025,11 @@ paths:
           for which you would like rates returned. If a time in the future is 
           specified, the current time will be used. If no end_time is specified,
           the time specified in the “start_timestamp" parameter will also be 
-          used for the "end_timestamp".</br>If your query is using a daily rate 
+          used for the "end_timestamp".<br/>If your query is using a daily rate 
           interval, your endpoint will return rates at your preferred daily 
           lock-in time ending on the date specified in your request. If your 
           account does not have a preferred daily lock-in time then rates will 
-          return as of 00:00 UTC.</br>If your query is using a faster rate 
+          return as of 00:00 UTC.<br/>If your query is using a faster rate 
           interval than daily, your endpoint will return daily rates at your 
           specified lock-in time or 00:00 UTC by default, unless you specify a 
           time parameter in your rate request.
@@ -1039,28 +1039,28 @@ paths:
         in: query
         description: OPTIONAL – Using one of the interval values below in your 
           call request will return rates for that specific 
-          interval.</br></br>"daily" - Returns one rate for the days specified 
-          in your time period</br>"hourly" - Returns rates for every hour in the
-          time period you specify</br>"15minutes" - Returns rates for each 15 
+          interval.<br/><br/>"daily" - Returns one rate for the days specified 
+          in your time period<br/>"hourly" - Returns rates for every hour in the
+          time period you specify<br/>"15minutes" - Returns rates for each 15 
           minute interval in the time period you specify, available for 7 days 
-          from current date</br>”minutely” - Returns minutely rates for the time
-          period, available for 7 days from current date</br></br>If omitted, 
+          from current date<br/>”minutely” - Returns minutely rates for the time
+          period, available for 7 days from current date<br/><br/>If omitted, 
           "daily" is used. This parameter is only used if both the 
           "start_timestamp" and "end_timestamp" parameters have been specified.
         schema:
           type: string
       - name: page
         in: query
-        description: 'OPTIONAL – You can specify the page number you want to request.</br>Note:
-          that page numbering is 1-based (the first page being page 1).</br>Omitting
-          this parameter will return the first page.</br>'
+        description: 'OPTIONAL – You can specify the page number you want to request.<br/>Note:
+          that page numbering is 1-based (the first page being page 1).<br/>Omitting
+          this parameter will return the first page.<br/>'
         schema:
           type: number
       - name: per_page
         in: query
         description: OPTIONAL – You can specify the number of days per page. The
           default is 30 days of rates per page with a maximum of 500 days of 
-          rates per page.</br>
+          rates per page.<br/>
         schema:
           type: number
       - name: obsolete
@@ -1194,19 +1194,19 @@ paths:
         taking the 00:00 UTC Daily rate for each day in the month/year you 
         specify in your query. Months are returned as a numeric value from 1 to 
         12 where 1 is for January and 12 is for December. If no month is 
-        provided, then all months for the given year are returned.</br>
+        provided, then all months for the given year are returned.<br/>
       parameters:
       - name: from
         in: query
         description: OPTIONAL – Currency you want to convert from ISO code. Note
-          if this parameter is omitted, default is USD.</br>
+          if this parameter is omitted, default is USD.<br/>
         schema:
           type: string
       - name: to
         in: query
         description: Comma separated list of to currencies based on ISO 4217 
           codes. This will limit the data returned to only those currencies that
-          are specified.</br>
+          are specified.<br/>
         required: true
         schema:
           type: string
@@ -1214,13 +1214,13 @@ paths:
         in: query
         description: OPTIONAL – This parameter can be used to specify the amount
           you want to convert, if an amount is not specified then 1 is 
-          assumed.</br>
+          assumed.<br/>
         schema:
           type: number
       - name: year
         in: query
         description: OPTIONAL – This parameter specifies the year to calculate 
-          average monthly rates.</br>
+          average monthly rates.<br/>
         schema:
           type: number
       - name: month
@@ -1228,7 +1228,7 @@ paths:
         description: OPTIONAL – This parameter specifies the month in the given 
           year to return average monthly rates. This is a numeric value from 1 
           to 12 where 1 is for January and 12 is for December. If no month is 
-          provided, then all months for the given year are returned.</br>
+          provided, then all months for the given year are returned.<br/>
         schema:
           type: number
       - name: obsolete
@@ -1347,10 +1347,10 @@ paths:
         API query. Note that, unlike the monthly_average endpoint, you specify exact
         start and end dates, which provides a heightened level of control. This can
         be quite useful if you want statistics for bi-monthly averages or any other
-        intervals of time. </br></br> This endpoint also provides several other statistics:
+        intervals of time. <br/><br/> This endpoint also provides several other statistics:
         the highest and lowest rate over the period (and their respective timestamps),
         the average rate, the standard deviation, volatility, and the number of data
-        points over this period. </br></br> To provide some background to how we obtain
+        points over this period. <br/><br/> To provide some background to how we obtain
         our statistics, volatility is measured by applying the standard deviation
         of the logarithmic daily returns, expressed in a percentage score. We calculate
         daily returns using the values of two consecutive days and measure the gain
@@ -1366,14 +1366,14 @@ paths:
       - name: from
         in: query
         description: OPTIONAL – Currency you want to convert from ISO code. Note
-          if this parameter is omitted, default is USD.</br>
+          if this parameter is omitted, default is USD.<br/>
         schema:
           type: string
       - name: to
         in: query
         description: Comma separated list of to currencies based on ISO 4217 
           codes. This will limit the data returned to only those currencies that
-          are specified.</br>
+          are specified.<br/>
         required: true
         schema:
           type: string
@@ -1382,7 +1382,7 @@ paths:
         description: OPTIONAL – ISO 8601 timestamp in the format yyyy-mm-dd 
           giving the UTC date of the start of the period for which you would 
           like to compute the volatility from. Note if this parameter is 
-          omitted, the start date will default to today.</br>
+          omitted, the start date will default to today.<br/>
         schema:
           type: string
       - name: end_date
@@ -1390,7 +1390,7 @@ paths:
         description: OPTIONAL – ISO 8601 timestamp in the format yyyy-mm-dd 
           giving the UTC date of the end of the period for which you would like 
           to compute the volatility to. Note if this parameter is omitted, the 
-          end date will default to today.</br>
+          end date will default to today.<br/>
         schema:
           type: string
       - name: obsolete
@@ -1504,14 +1504,14 @@ paths:
       summary: Central bank exchange rates from currency of central bank to one 
         or multiple counter currencies, provided by specified central bank.
       description: |-
-        In the example below, the endpoint converts from CAD to all available currencies for the Bank of Canada (the asterisk * represents ALL currencies).</br><a href="https://xecdapi.xe.com/v1/central_bank_rate.csv/?central_bank=CAN&to=*&amount=1">https://xecdapi.xe.com/v1/central_bank_rate.csv/?central_bank=CAN&to=*&amount=1</a>
+        In the example below, the endpoint converts from CAD to all available currencies for the Bank of Canada (the asterisk * represents ALL currencies).<br/><a href="https://xecdapi.xe.com/v1/central_bank_rate.csv/?central_bank=CAN&to=*&amount=1">https://xecdapi.xe.com/v1/central_bank_rate.csv/?central_bank=CAN&to=*&amount=1</a>
 
         <i>Note on Central Bank Data Coverage: Some Central Banks may experience temporary data gaps due to source website changes or access restrictions. For these banks, we continue to provide historical data and are working to restore full coverage.</i>
       parameters:
       - name: central_bank
         in: query
         description: |
-          REQUIRED – Three letter codes representing the specific central bank you are querying for. The time(s) specified below highlights the time rates published by each respective central bank updates within the API service.</br>
+          REQUIRED – Three letter codes representing the specific central bank you are querying for. The time(s) specified below highlights the time rates published by each respective central bank updates within the API service.<br/>
           | Code | Country | Name | Posts | Available at (UTC) | Effective for | Bid/Ask
           |:---: |:---: |:---: |:---: |:---: |:---: |:---: |
           | AFG | Afghanistan | The Afghanistan Bank | Daily | 13:00 | Same day | ✓
@@ -1631,7 +1631,7 @@ paths:
         in: query
         description: OPTIONAL – This parameter can be used to specify the amount
           you want to convert, if an amount is not specified then 1 is 
-          assumed.</br>
+          assumed.<br/>
         required: false
         schema:
           type: number
@@ -1827,7 +1827,7 @@ paths:
       - name: source
         in: query
         description: |
-          REQUIRED – Use the following source codes to represent the specific source you are querying for. The time(s) specified below highlights the time rates are published by each respective source within the API service.</br>
+          REQUIRED – Use the following source codes to represent the specific source you are querying for. The time(s) specified below highlights the time rates are published by each respective source within the API service.<br/>
           | Source | Country | Name | Posts | Available at (UTC) | Effective for | Bid/Ask
           |:---: |:---: |:---: |:---: |:---: |:---: |:---: |
           | anz | Australia | ANZ Investment Bank | Daily | 16:00 | Same day | ✓
@@ -1868,7 +1868,7 @@ paths:
         in: query
         description: OPTIONAL – This parameter can be used to specify the amount
           you want to convert, if an amount is not specified then 1 is 
-          assumed.</br>
+          assumed.<br/>
         required: false
         schema:
           type: number
