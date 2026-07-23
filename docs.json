@@ -1,0 +1,1653 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "seo": {
+    "metatags": {
+      "robots": "noindex"
+    }
+  },
+  "name": "Asaas",
+  "logo": {
+    "light": "/images/logo.png",
+    "dark": "/images/logo.png",
+    "href": "/"
+  },
+  "colors": {
+    "primary": "#0038E5",
+    "dark": "#0038E5",
+    "light": "#0038E5"
+  },
+  "favicon": "/images/favicon.ico",
+  "metadata": {
+    "timestamp": true
+  },
+  "navigation": {
+    "languages": [
+      {
+        "language": "pt-BR",
+        "tabs": [
+          {
+            "tab": "Home",
+            "icon": "house",
+            "pages": [
+              "pt"
+            ]
+          },
+          {
+            "tab": "Guias",
+            "icon": "book-open",
+            "groups": [
+              {
+                "group": "Guias",
+                "pages": [
+                  {
+                    "group": "Comece aqui",
+                    "pages": [
+                      "pt/docs/welcome-to-asaas",
+                      "pt/docs/contact-us",
+                      {
+                        "group": "Collections",
+                        "pages": [
+                          "pt/docs/postman-en",
+                          "pt/docs/insomnia-en"
+                        ]
+                      },
+                      "pt/docs/common-questions",
+                      "pt/docs/about-baas"
+                    ]
+                  },
+                  {
+                    "group": "Segurança",
+                    "pages": [
+                      "pt/docs/authentication-2",
+                      {
+                        "group": "Chaves de API",
+                        "root": "pt/docs/chaves-de-api",
+                        "pages": [
+                          "pt/docs/padrão-de-chave-com-e-clientes-php"
+                        ]
+                      },
+                      "pt/docs/mecanismo-para-validacao-de-saque-via-webhooks",
+                      "pt/docs/whitelist-de-ips",
+                      "pt/docs/pci-dss-1"
+                    ]
+                  },
+                  "pt/docs/mcp-1",
+                  {
+                    "group": "Sandbox",
+                    "root": "pt/docs/sandbox-2",
+                    "pages": [
+                      "pt/docs/how-to-set-up-your-account-in-the-sandbox-1",
+                      "pt/docs/adding-balance-to-a-sandbox-account",
+                      {
+                        "group": "Como testar funcionalidades em sandbox",
+                        "root": "pt/docs/how-to-test-features",
+                        "pages": [
+                          "pt/docs/testing-credit-card-payment",
+                          "pt/docs/testing-bill-payment",
+                          "pt/docs/testing-transfers",
+                          "pt/docs/testing-pix-qr-code-payment",
+                          "pt/docs/trying-to-pay-a-pix-qr-code-in-sandbox-without-a-registered-key-404-error",
+                          "pt/docs/how-to-test-critical-actions",
+                          "pt/docs/how-to-generate-new-charges-from-a-subscription"
+                        ]
+                      },
+                      "pt/docs/what-can-be-tested",
+                      "pt/docs/approval-of-accounts",
+                      "pt/docs/faq-sandbox-1"
+                    ]
+                  },
+                  {
+                    "group": "Cobranças",
+                    "pages": [
+                      "pt/docs/payments-overview",
+                      "pt/docs/creating-customers",
+                      "pt/docs/payments-via-bank-slip",
+                      "pt/docs/payments-via-credit-card",
+                      "pt/docs/installment-payments",
+                      "pt/docs/redirection-after-payment",
+                      "pt/docs/chargeback-en",
+                      "pt/docs/refunds"
+                    ]
+                  },
+                  {
+                    "group": "Pix",
+                    "pages": [
+                      "pt/docs/pix-overview",
+                      "pt/docs/payments-via-pix-or-dynamic-qr-code",
+                      "pt/docs/creating-a-static-qr-code",
+                      "pt/docs/recurring-pix",
+                      "pt/docs/automatic-pix",
+                      "pt/docs/difference-between-recurring-pix-and-automatic-pix"
+                    ]
+                  },
+                  {
+                    "group": "Pix Automático",
+                    "root": "pt/docs/automatic-pix-1",
+                    "pages": [
+                      "pt/docs/implementation",
+                      "pt/docs/automatic-pix-webhook-flows",
+                      "pt/docs/refusal-reasons",
+                      "pt/docs/diferença-entre-pix-automático-e-assinaturas",
+                      "pt/docs/retry-process-journey-3-api",
+                      "pt/docs/automatic-pix-faq"
+                    ]
+                  },
+                  {
+                    "group": "Assinaturas (recorrência)",
+                    "root": "pt/docs/assinaturas-recorrência",
+                    "pages": [
+                      "pt/docs/subscription-overview",
+                      "pt/docs/creating-a-subscription",
+                      "pt/docs/subscriptions-via-credit-card",
+                      "pt/docs/automatically-issue-invoices-for-subscriptions",
+                      "pt/docs/subscription-blocking-flow-due-to-split-mismatch",
+                      "pt/docs/diferença-entre-pix-automático-e-assinaturas-1",
+                      "pt/docs/faq-assinaturas"
+                    ]
+                  },
+                  {
+                    "group": "Link de pagamento",
+                    "pages": [
+                      "pt/docs/payment-links-overview",
+                      "pt/docs/creating-a-payment-link"
+                    ]
+                  },
+                  {
+                    "group": "Asaas Checkout",
+                    "root": "pt/docs/asaas-checkout",
+                    "pages": [
+                      "pt/docs/introduction-1",
+                      "pt/docs/how-to-provide-customer-data",
+                      "pt/docs/checkout-for-pix",
+                      "pt/docs/checkout-for-credit-card",
+                      "pt/docs/checkout-with-subscription-recurring",
+                      "pt/docs/checkout-with-payment-split",
+                      "pt/docs/checkout-link-and-customer-redirection",
+                      "pt/docs/common-errors-and-best-practices"
+                    ]
+                  },
+                  {
+                    "group": "Split de pagamento",
+                    "pages": [
+                      "pt/docs/payment-split-overview",
+                      "pt/docs/split-in-single-payments",
+                      "pt/docs/split-into-installments",
+                      "pt/docs/split-on-subscriptions",
+                      "pt/docs/split-in-anticipated-payments",
+                      "pt/docs/split-query-via-interface",
+                      {
+                        "group": "Usando o split sem API",
+                        "root": "pt/docs/using-split-without-api",
+                        "pages": [
+                          "pt/docs/split-in-woocommerce",
+                          "pt/docs/split-na-pluga"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Antecipações",
+                    "pages": [
+                      "pt/docs/introduction"
+                    ]
+                  },
+                  {
+                    "group": "Notificações",
+                    "pages": [
+                      "pt/docs/notifications-overview",
+                      "pt/docs/default-notifications",
+                      "pt/docs/changing-notifications-of-a-client"
+                    ]
+                  },
+                  {
+                    "group": "Transferências",
+                    "pages": [
+                      "pt/docs/transfers-overview",
+                      "pt/docs/transfer-to-accounts-at-another-institution-pix-ted",
+                      "pt/docs/transfer-to-asaas-account"
+                    ]
+                  },
+                  {
+                    "group": "Notas fiscais",
+                    "pages": [
+                      "pt/docs/invoices-overview",
+                      "pt/docs/configure-tax-information",
+                      "pt/docs/issuing-service-invoices",
+                      "pt/docs/piscofins-withholding-settings-and-tax-status"
+                    ]
+                  },
+                  {
+                    "group": "Webhooks",
+                    "root": "pt/docs/webhooks-1",
+                    "pages": [
+                      "pt/docs/about-webhooks",
+                      "pt/docs/create-new-webhook-via-web-application",
+                      "pt/docs/create-new-webhook-via-api",
+                      "pt/docs/receive-asaas-events-at-your-webhook-endpoint",
+                      "pt/docs/how-to-implement-idempotence-in-webhooks",
+                      "pt/docs/polling-vs-webhooks-en",
+                      {
+                        "group": "Eventos de Webhooks",
+                        "root": "pt/docs/webhooks-events",
+                        "pages": [
+                          "pt/docs/payment-events",
+                          "pt/docs/subscription-events",
+                          "pt/docs/invoices-events",
+                          "pt/docs/transfer-events",
+                          "pt/docs/bill-events",
+                          "pt/docs/receivable-anticipation-events",
+                          "pt/docs/phone-recharge-events",
+                          "pt/docs/account-status-events",
+                          "pt/docs/checkout-events",
+                          "pt/docs/balance-block-events",
+                          "pt/docs/internal-movement-events",
+                          "pt/docs/api-key-events",
+                          "pt/docs/events-for-automatic-pix"
+                        ]
+                      },
+                      "pt/docs/send-types",
+                      "pt/docs/webhooks-logs",
+                      "pt/docs/queue-penalty",
+                      {
+                        "group": "Fila pausada",
+                        "root": "pt/docs/webhooks-queue-paused",
+                        "pages": [
+                          "pt/docs/how-to-reactivate-an-interrupted-queue",
+                          "pt/docs/error-400-bad-request",
+                          "pt/docs/error-403-forbidden",
+                          "pt/docs/error-404-not-found",
+                          "pt/docs/error-408-read-timed-out",
+                          "pt/docs/error-500-internal-server-error",
+                          "pt/docs/connect-timed-out-error",
+                          "pt/docs/other-errors"
+                        ]
+                      },
+                      "pt/docs/cloudflare-firewall-blocking-1",
+                      "pt/docs/official-asaas-ips",
+                      "pt/docs/webhooks-faq"
+                    ]
+                  },
+                  {
+                    "group": "Subcontas",
+                    "pages": [
+                      "pt/docs/creating-subaccounts",
+                      "pt/docs/onboarding-and-sending-documents-via-link",
+                      "pt/docs/creating-baas-subaccounts",
+                      "pt/docs/detailed-subaccount-approval-flow",
+                      "pt/docs/annual-business-data-confirmation-for-subaccounts",
+                      "pt/docs/change-the-name-of-a-business-subaccount-via-api",
+                      "pt/docs/sub-account-api-key-management",
+                      "pt/docs/closing-non-baas-subaccounts",
+                      "pt/docs/faq-evaluation-period"
+                    ]
+                  },
+                  {
+                    "group": "Pague Contas",
+                    "root": "pt/docs/pague-contas",
+                    "pages": [
+                      "pt/docs/introduction-5",
+                      "pt/docs/immediate-payment-x-scheduled-payment",
+                      "pt/docs/rules",
+                      "pt/docs/possible-statuses",
+                      "pt/docs/common-error-messages",
+                      "pt/docs/testing-in-the-sandbox",
+                      "pt/docs/general-best-practices"
+                    ]
+                  },
+                  {
+                    "group": "Conta Escrow",
+                    "pages": [
+                      "pt/docs/introduction-2",
+                      "pt/docs/enabling-the-escrow-account-for-subaccounts",
+                      "pt/docs/fee-charging-per-configured-subaccount",
+                      "pt/docs/funds-guaranteed-by-the-escrow-account",
+                      "pt/docs/release-of-guaranteed-funds",
+                      "pt/docs/disabling-the-escrow-account"
+                    ]
+                  },
+                  {
+                    "group": "Plugins/Módulos/Parceiros",
+                    "root": "pt/docs/pluginsmodules",
+                    "pages": [
+                      {
+                        "group": "Shopify",
+                        "root": "pt/docs/shopify-1",
+                        "pages": [
+                          "pt/docs/bank-payment-slip",
+                          "pt/docs/pix-5",
+                          "pt/docs/credit-card-1",
+                          "pt/docs/general-settings",
+                          "pt/docs/frequently-asked-questions-1"
+                        ]
+                      },
+                      {
+                        "group": "WooCommerce",
+                        "root": "pt/docs/woocommerce",
+                        "pages": [
+                          "pt/docs/installing-the-plugin-woocommerce-asaas",
+                          "pt/docs/initial-settings",
+                          "pt/docs/payment-methods",
+                          "pt/docs/common-questions-woocommerce-asaas",
+                          "pt/docs/woocommerce-subscriptions",
+                          "pt/docs/woocommerce-webhooks",
+                          "pt/docs/common-errors",
+                          "pt/docs/payment-splitting-in-woocommerce",
+                          "pt/docs/faq-woocommerce-1"
+                        ]
+                      },
+                      {
+                        "group": "Emissor NF-e para WooCommerce - BaseERP",
+                        "root": "pt/docs/nf-e-issuer-for-woocommerce-base-erp",
+                        "pages": [
+                          "pt/docs/installationconfiguration",
+                          "pt/docs/product-registrationlinking"
+                        ]
+                      },
+                      {
+                        "group": "Nuvemshop",
+                        "root": "pt/docs/nuvemshop-1",
+                        "pages": [
+                          "pt/docs/installing-the-module",
+                          "pt/docs/initial-settings-1",
+                          "pt/docs/faq-1"
+                        ]
+                      },
+                      {
+                        "group": "Magento",
+                        "root": "pt/docs/magento-1",
+                        "pages": [
+                          "pt/docs/installing-the-module-1",
+                          "pt/docs/initial-settings-2",
+                          "pt/docs/faq-magento-1"
+                        ]
+                      },
+                      {
+                        "group": "Pluga",
+                        "root": "pt/docs/pluga-1",
+                        "pages": [
+                          "pt/docs/introduction-3",
+                          "pt/docs/asaas-split-on-pluga",
+                          "pt/docs/faq-pluga"
+                        ]
+                      },
+                      {
+                        "group": "Digital Manager Guru",
+                        "root": "pt/docs/digital-manager-guru-1",
+                        "pages": [
+                          "pt/docs/introduction-4"
+                        ]
+                      },
+                      {
+                        "group": "Make/Integromat",
+                        "root": "pt/docs/makeintegromat",
+                        "pages": [
+                          "pt/docs/advantages-features",
+                          "pt/docs/templates-1",
+                          "pt/docs/create-a-one-time-charge-from-a-google-sheets-row",
+                          "pt/docs/create-a-subscription-from-a-google-sheets-row",
+                          "pt/docs/create-an-installment-payment-from-a-google-sheets-row",
+                          "pt/docs/faq-makeintegromat"
+                        ]
+                      },
+                      {
+                        "group": "N8N",
+                        "root": "pt/docs/n8n-1",
+                        "pages": [
+                          "pt/docs/installation"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Dúvidas frequentes",
+                    "pages": [
+                      "pt/docs/subscriptions",
+                      "pt/docs/authentication",
+                      "pt/docs/customers",
+                      "pt/docs/payments-1",
+                      "pt/docs/api-limits-1",
+                      "pt/docs/notifications-1",
+                      "pt/docs/installments",
+                      "pt/docs/pix-4",
+                      "pt/docs/sandbox-1",
+                      "pt/docs/security",
+                      "pt/docs/split",
+                      "pt/docs/subaccounts-1",
+                      "pt/docs/transfers-1",
+                      "pt/docs/webhooks-3",
+                      "pt/docs/duvidas-frequentes-baas",
+                      "pt/docs/tokenization"
+                    ]
+                  },
+                  {
+                    "group": "SDK",
+                    "root": "pt/docs/sdks",
+                    "pages": [
+                      "pt/docs/java"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Receitas",
+            "icon": "flask",
+            "pages": [
+              "pt/recipes/crie-saldo-na-sua-conta-em-sandbox",
+              "pt/recipes/testar-pagamento-via-qr-code-pix-no-sandbox",
+              "pt/recipes/testar-pagamento-com-cartão-de-crédito-no-sandbox"
+            ]
+          },
+          {
+            "tab": "Referência da API",
+            "icon": "code",
+            "groups": [
+              {
+                "group": "Introdução",
+                "pages": [
+                  "pt/reference/about-this-doc",
+                  "pt/reference/como-testar-as-chamadas-aqui-na-documentação-copy",
+                  "pt/reference/http-response-codes",
+                  "pt/reference/listing-and-pagination",
+                  "pt/reference/api-limits"
+                ]
+              },
+              {
+                "group": "Asaas",
+                "pages": [
+                  {
+                    "group": "Clientes",
+                    "pages": [
+                      "pt/reference/create-new-customer",
+                      "pt/reference/list-customers",
+                      "pt/reference/retrieve-a-single-customer",
+                      "pt/reference/update-existing-customer",
+                      "pt/reference/remove-customer",
+                      "pt/reference/restore-removed-customer",
+                      "pt/reference/retrieve-notifications-from-a-customer"
+                    ]
+                  },
+                  {
+                    "group": "Cobranças",
+                    "pages": [
+                      "pt/reference/create-new-payment",
+                      "pt/reference/list-payments",
+                      "pt/reference/create-new-payment-with-credit-card",
+                      "pt/reference/capture-payment-with-pre-authorization",
+                      "pt/reference/pay-a-charge-with-credit-card",
+                      "pt/reference/retrieve-payment-billing-information",
+                      "pt/reference/payment-viewing-information",
+                      "pt/reference/retrieve-a-single-payment",
+                      "pt/reference/update-existing-payment",
+                      "pt/reference/delete-payment",
+                      "pt/reference/restore-removed-payment",
+                      "pt/reference/retrieve-status-of-a-payment",
+                      "pt/reference/get-digitable-bill-line",
+                      "pt/reference/get-qr-code-for-pix-payments",
+                      "pt/reference/confirm-cash-receipt",
+                      "pt/reference/undo-cash-receipt-confirmation",
+                      "pt/reference/sales-simulator",
+                      "pt/reference/recovering-payment-limits",
+                      "pt/reference/pay-a-charge-with-card"
+                    ]
+                  },
+                  {
+                    "group": "Cobranças com dados resumidos",
+                    "pages": [
+                      "pt/reference/create-new-payment-with-summary-data-in-response",
+                      "pt/reference/list-payments-with-summary-data",
+                      "pt/reference/create-new-payment-with-credit-card-with-summary-data-in-response",
+                      "pt/reference/capture-payment-with-pre-authorization-with-summary-data-in-response",
+                      "pt/reference/retrieve-a-single-payment-with-summary-data",
+                      "pt/reference/update-existing-payment-with-summary-data-in-response",
+                      "pt/reference/delete-payment-with-summary-data",
+                      "pt/reference/restore-removed-payment-with-summary-data-in-response",
+                      "pt/reference/confirm-cash-receipt-with-summary-data-in-response",
+                      "pt/reference/undo-cash-receipt-confirmation-with-summary-data-in-response"
+                    ]
+                  },
+                  {
+                    "group": "Documentos de cobranças",
+                    "pages": [
+                      "pt/reference/upload-payment-documents",
+                      "pt/reference/list-documents-of-a-payment",
+                      "pt/reference/update-settings-of-a-document-of-a-payment",
+                      "pt/reference/retrieve-a-single-document-of-a-payment",
+                      "pt/reference/delete-document-from-a-payment"
+                    ]
+                  },
+                  {
+                    "group": "Parcelamentos",
+                    "pages": [
+                      "pt/reference/create-installment",
+                      "pt/reference/list-installments",
+                      "pt/reference/create-installment-with-credit-card",
+                      "pt/reference/retrieve-a-single-installment",
+                      "pt/reference/remove-installment",
+                      "pt/reference/list-payments-of-a-installment",
+                      "pt/reference/generate-installment-booklet",
+                      "pt/reference/update-installment-splits",
+                      "pt/reference/cancel-charges-of-an-installment"
+                    ]
+                  },
+                  {
+                    "group": "Assinaturas",
+                    "pages": [
+                      "pt/reference/create-new-subscription",
+                      "pt/reference/list-subscriptions",
+                      "pt/reference/create-subscription-with-credit-card",
+                      "pt/reference/retrieve-a-single-subscription",
+                      "pt/reference/update-existing-subscription",
+                      "pt/reference/remove-subscription",
+                      "pt/reference/update-subscription-credit-card",
+                      "pt/reference/list-payments-of-a-subscription",
+                      "pt/reference/generate-subscription-booklet",
+                      "pt/reference/create-configuration-for-issuance-of-invoices",
+                      "pt/reference/retrieve-configuration-for-issuance-of-invoices",
+                      "pt/reference/remove-configuration-for-issuance-of-invoices",
+                      "pt/reference/update-configuration-for-issuance-of-invoices",
+                      "pt/reference/list-invoices-for-subscription-charges"
+                    ]
+                  },
+                  {
+                    "group": "Link de pagamentos",
+                    "pages": [
+                      "pt/reference/create-a-payments-link",
+                      "pt/reference/list-payments-links",
+                      "pt/reference/update-a-payments-link",
+                      "pt/reference/retrieve-a-single-payments-link",
+                      "pt/reference/remove-a-payments-link",
+                      "pt/reference/restore-a-payments-link",
+                      "pt/reference/add-an-image-to-a-payments-link",
+                      "pt/reference/list-images-from-a-payments-link",
+                      "pt/reference/retrieve-a-single-payments-link-image",
+                      "pt/reference/remove-an-image-from-payments-link",
+                      "pt/reference/set-payments-link-main-image"
+                    ]
+                  },
+                  {
+                    "group": "Checkout",
+                    "pages": [
+                      "pt/reference/create-new-checkout",
+                      "pt/reference/cancel-a-checkout"
+                    ]
+                  },
+                  {
+                    "group": "Cartão de crédito",
+                    "pages": [
+                      "pt/reference/credit-card-tokenization",
+                      "pt/reference/save-or-update-pre-authorization-configuration",
+                      "pt/reference/retrieve-pre-authorization-configuration"
+                    ]
+                  },
+                  {
+                    "group": "Antecipações",
+                    "pages": [
+                      "pt/reference/retrieve-a-single-anticipation",
+                      "pt/reference/request-anticipation",
+                      "pt/reference/list-anticipations",
+                      "pt/reference/simulate-anticipation",
+                      "pt/reference/update-status-of-automatic-anticipation",
+                      "pt/reference/retrieve-status-of-automatic-anticipation",
+                      "pt/reference/retrieve-anticipation-limits",
+                      "pt/reference/cancel-anticipation"
+                    ]
+                  },
+                  {
+                    "group": "Estornos",
+                    "pages": [
+                      "pt/reference/listar-estornos-de-uma-cobranca",
+                      "pt/reference/estornar-boleto",
+                      "pt/reference/retrieve-refunds-of-a-single-payment",
+                      "pt/reference/estornar-cobranca-com-dados-resumidos-na-resposta",
+                      "pt/reference/refund-bank-slip"
+                    ]
+                  },
+                  {
+                    "group": "Chargeback",
+                    "pages": [
+                      "pt/reference/create-a-chargeback-dispute",
+                      "pt/reference/list-chargebacks",
+                      "pt/reference/retrieve-a-single-chargeback"
+                    ]
+                  },
+                  {
+                    "group": "Splits",
+                    "pages": [
+                      "pt/reference/retrieve-a-single-paid-split",
+                      "pt/reference/list-paid-splits-1",
+                      "pt/reference/retrieve-a-single-received-split",
+                      "pt/reference/list-received-splits-1"
+                    ]
+                  },
+                  {
+                    "group": "Conta Escrow",
+                    "pages": [
+                      "pt/reference/save-or-update-escrow-account-configuration-for-subaccount",
+                      "pt/reference/create-default-escrow-account-configuration-to-all-subaccounts",
+                      "pt/reference/finish-payment-escrow-in-the-escrow-account",
+                      "pt/reference/reterive-escrow-account-configuration-for-subaccount",
+                      "pt/reference/retrieve-default-escrow-account-configuration",
+                      "pt/reference/retrieve-payment-escrow-in-the-escrow-account"
+                    ]
+                  },
+                  {
+                    "group": "Notificações",
+                    "pages": [
+                      "pt/reference/update-existing-notification",
+                      "pt/reference/update-existing-notifications-in-batch"
+                    ]
+                  },
+                  {
+                    "group": "Consulta Serasa",
+                    "pages": [
+                      "pt/reference/make-consultation",
+                      "pt/reference/list-credit-bureau-reports",
+                      "pt/reference/retrieve-a-credit-bureau-report"
+                    ]
+                  },
+                  {
+                    "group": "Negativações",
+                    "pages": [
+                      "pt/reference/create-a-payment-dunning",
+                      "pt/reference/list-payment-dunnings",
+                      "pt/reference/simulate-a-payment-dunning",
+                      "pt/reference/recover-a-single-payment-dunning",
+                      "pt/reference/event-history-lists",
+                      "pt/reference/list-payments-received",
+                      "pt/reference/list-payments-available-for-payment-dunning",
+                      "pt/reference/resend-documents",
+                      "pt/reference/cancel-payment-dunning"
+                    ]
+                  },
+                  {
+                    "group": "Notas fiscais",
+                    "pages": [
+                      "pt/reference/schedule-invoice",
+                      "pt/reference/list-invoices",
+                      "pt/reference/update-invoice",
+                      "pt/reference/retrieve-a-single-invoice",
+                      "pt/reference/issue-an-invoice",
+                      "pt/reference/cancel-an-invoice"
+                    ]
+                  },
+                  {
+                    "group": "Informações fiscais",
+                    "pages": [
+                      "pt/reference/list-municipal-configurations",
+                      "pt/reference/create-and-update-tax-information",
+                      "pt/reference/retrieve-tax-information",
+                      "pt/reference/list-municipal-services",
+                      "pt/reference/list-nbs-codes",
+                      "pt/reference/configure-invoice-issuing-portal",
+                      "pt/reference/list-federal-service-codes",
+                      "pt/reference/list-operation-indicator-codes",
+                      "pt/reference/list-tax-classification-codes",
+                      "pt/reference/list-tax-situation-codes"
+                    ]
+                  },
+                  {
+                    "group": "Pix",
+                    "pages": [
+                      "pt/reference/create-a-key",
+                      "pt/reference/list-keys",
+                      "pt/reference/retrieve-a-single-key",
+                      "pt/reference/remove-key-1",
+                      "pt/reference/create-static-qrcode",
+                      "pt/reference/delete-static-qrcode",
+                      "pt/reference/available-token-bucket-check",
+                      "pt/reference/check-pix-key"
+                    ]
+                  },
+                  {
+                    "group": "Transações Pix",
+                    "pages": [
+                      "pt/reference/pay-a-qrcode",
+                      "pt/reference/decode-a-qrcode-for-payment",
+                      "pt/reference/retrieve-a-single-transaction",
+                      "pt/reference/list-transactions",
+                      "pt/reference/cancel-a-scheduled-transaction"
+                    ]
+                  },
+                  {
+                    "group": "Pix Automático",
+                    "pages": [
+                      "pt/reference/create-automatic-pix-payment-instruction-retry",
+                      "pt/reference/create-an-automatic-pix-authorization",
+                      "pt/reference/list-automatic-pix-authorizations",
+                      "pt/reference/retrieve-a-single-automatic-pix-authorization",
+                      "pt/reference/cancel-an-automatic-pix-authorization",
+                      "pt/reference/retrieve-a-single-automatic-pix-payment-instruction",
+                      "pt/reference/list-automatic-pix-payment-instructions"
+                    ]
+                  },
+                  {
+                    "group": "Pix Recorrente",
+                    "pages": [
+                      "pt/reference/list-recurrences",
+                      "pt/reference/retrieve-a-single-recurrence",
+                      "pt/reference/cancel-a-recurrence",
+                      "pt/reference/list-recurrence-items",
+                      "pt/reference/cancel-a-recurrence-item"
+                    ]
+                  },
+                  {
+                    "group": "Transferências",
+                    "pages": [
+                      "pt/reference/transfer-to-another-institution-account-or-pix-key",
+                      "pt/reference/list-transfers",
+                      "pt/reference/transfer-to-asaas-account-1",
+                      "pt/reference/retrieve-a-single-transfer",
+                      "pt/reference/cancel-a-transfer"
+                    ]
+                  },
+                  {
+                    "group": "Pagamento de contas",
+                    "pages": [
+                      "pt/reference/create-a-bill-payment",
+                      "pt/reference/list-bill-payments",
+                      "pt/reference/simulate-a-bill-payment",
+                      "pt/reference/retrieve-a-single-bill-payment",
+                      "pt/reference/cancel-bill-payment"
+                    ]
+                  },
+                  {
+                    "group": "Recargas de celular",
+                    "pages": [
+                      "pt/reference/request-recharge",
+                      "pt/reference/list-mobile-recharges",
+                      "pt/reference/recover-a-single-cellphone-recharge",
+                      "pt/reference/cancel-a-cellphone-recharge",
+                      "pt/reference/search-for-cell-phone-provider"
+                    ]
+                  },
+                  {
+                    "group": "Extrato",
+                    "pages": [
+                      "pt/reference/retrieve-extract"
+                    ]
+                  },
+                  {
+                    "group": "Informações financeiras",
+                    "pages": [
+                      "pt/reference/retrieve-account-balance",
+                      "pt/reference/billing-statistics",
+                      "pt/reference/retrieve-split-values"
+                    ]
+                  },
+                  {
+                    "group": "Informações e personalização da conta",
+                    "pages": [
+                      "pt/reference/retrieve-business-data",
+                      "pt/reference/update-business-data",
+                      "pt/reference/save-payment-checkout-personalization",
+                      "pt/reference/retrieve-personalization-settings",
+                      "pt/reference/retrieve-asaas-account-number",
+                      "pt/reference/retrieve-account-fees",
+                      "pt/reference/check-account-registration-status",
+                      "pt/reference/retrieve-walletid",
+                      "pt/reference/delete-baas-subaccount"
+                    ]
+                  },
+                  {
+                    "group": "Webhooks",
+                    "pages": [
+                      "pt/reference/create-new-webhook",
+                      "pt/reference/list-webhooks",
+                      "pt/reference/retrieve-a-single-webhook",
+                      "pt/reference/update-existing-webhook",
+                      "pt/reference/remove-webhook",
+                      "pt/reference/remove-webhook-backoff"
+                    ]
+                  },
+                  {
+                    "group": "Subcontas Asaas",
+                    "pages": [
+                      "pt/reference/create-subaccount",
+                      "pt/reference/reenviar-link-de-ativacao-para-subconta-nao-baas",
+                      "pt/reference/list-subaccounts",
+                      "pt/reference/retrieve-a-single-subaccount",
+                      "pt/reference/create-api-key-for-subaccount",
+                      "pt/reference/list-api-keys-for-subaccount",
+                      "pt/reference/update-api-key-for-a-subaccount",
+                      "pt/reference/delete-api-key-for-a-subaccount",
+                      "pt/reference/close-non-baas-subaccount"
+                    ]
+                  },
+                  {
+                    "group": "Ações em sandbox",
+                    "pages": [
+                      "pt/reference/approve-account",
+                      "pt/reference/confirm-payment",
+                      "pt/reference/force-expire"
+                    ]
+                  },
+                  {
+                    "group": "Registro de Recebíveis",
+                    "pages": [
+                      "pt/reference/recuperar-efeito-de-contrato-bloqueando-antecipacao-da-cobranca"
+                    ]
+                  },
+                  {
+                    "group": "Receivable Registration",
+                    "pages": [
+                      "pt/reference/retrieve-contract-effect-blocking-payment-anticipation"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "tabs": [
+          {
+            "tab": "Home",
+            "icon": "house",
+            "pages": [
+              "index"
+            ]
+          },
+          {
+            "tab": "Guides",
+            "icon": "book-open",
+            "groups": [
+              {
+                "group": "Guides",
+                "pages": [
+                  {
+                    "group": "Getting Started",
+                    "pages": [
+                      "docs/welcome-to-asaas",
+                      "docs/contact-us",
+                      {
+                        "group": "Collections",
+                        "pages": [
+                          "docs/postman-en",
+                          "docs/insomnia-en"
+                        ]
+                      },
+                      "docs/common-questions",
+                      "docs/about-baas"
+                    ]
+                  },
+                  {
+                    "group": "Security",
+                    "pages": [
+                      "docs/authentication-2",
+                      {
+                        "group": "Additional Security Mechanisms",
+                        "root": "docs/additional-security-mechanisms",
+                        "pages": [
+                          "docs/mechanism-for-validating-withdrawals-via-webhooks",
+                          "docs/pci-dss",
+                          "docs/ip-whitelisting"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Sandbox",
+                    "root": "docs/sandbox-2",
+                    "pages": [
+                      "docs/how-to-set-up-your-account-in-the-sandbox-1",
+                      "docs/adding-balance-to-a-sandbox-account",
+                      {
+                        "group": "How to Test Features in Sandbox",
+                        "root": "docs/how-to-test-features",
+                        "pages": [
+                          "docs/testing-credit-card-payment",
+                          "docs/testing-bill-payment",
+                          "docs/testing-transfers",
+                          "docs/testing-pix-qr-code-payment",
+                          "docs/trying-to-pay-a-pix-qr-code-in-sandbox-without-a-registered-key-404-error",
+                          "docs/how-to-test-critical-actions",
+                          "docs/how-to-generate-new-charges-from-a-subscription"
+                        ]
+                      },
+                      "docs/what-can-be-tested",
+                      "docs/approval-of-accounts",
+                      "docs/faq-sandbox-1"
+                    ]
+                  },
+                  {
+                    "group": "Payments",
+                    "pages": [
+                      "docs/payments-overview",
+                      "docs/creating-customers",
+                      "docs/payments-via-bank-slip",
+                      "docs/payments-via-credit-card",
+                      "docs/installment-payments",
+                      "docs/redirection-after-payment",
+                      "docs/chargeback-en",
+                      "docs/refunds"
+                    ]
+                  },
+                  {
+                    "group": "Bill",
+                    "pages": [
+                      "docs/introduction-5",
+                      "docs/immediate-payment-x-scheduled-payment",
+                      "docs/rules",
+                      "docs/possible-statuses",
+                      "docs/common-error-messages",
+                      "docs/testing-in-the-sandbox",
+                      "docs/general-best-practices"
+                    ]
+                  },
+                  {
+                    "group": "Pix",
+                    "pages": [
+                      "docs/pix-overview",
+                      "docs/payments-via-pix-or-dynamic-qr-code",
+                      "docs/creating-a-static-qr-code",
+                      "docs/recurring-pix",
+                      "docs/automatic-pix",
+                      "docs/difference-between-recurring-pix-and-automatic-pix"
+                    ]
+                  },
+                  {
+                    "group": "Automatic Pix",
+                    "root": "docs/automatic-pix-1",
+                    "pages": [
+                      "docs/implementation",
+                      "docs/automatic-pix-webhook-flows",
+                      "docs/refusal-reasons",
+                      "docs/retry-process-journey-3-api",
+                      "docs/automatic-pix-faq"
+                    ]
+                  },
+                  {
+                    "group": "Subscription",
+                    "pages": [
+                      "docs/subscription-overview",
+                      "docs/creating-a-subscription",
+                      "docs/subscriptions-via-credit-card",
+                      "docs/automatically-issue-invoices-for-subscriptions",
+                      "docs/subscription-blocking-flow-due-to-split-mismatch"
+                    ]
+                  },
+                  {
+                    "group": "Payment links",
+                    "pages": [
+                      "docs/payment-links-overview",
+                      "docs/creating-a-payment-link"
+                    ]
+                  },
+                  {
+                    "group": "Asaas Checkout",
+                    "root": "docs/asaas-checkout",
+                    "pages": [
+                      "docs/introduction-1",
+                      "docs/how-to-provide-customer-data",
+                      "docs/checkout-for-pix",
+                      "docs/checkout-for-credit-card",
+                      "docs/checkout-with-subscription-recurring",
+                      "docs/checkout-with-payment-split",
+                      "docs/checkout-link-and-customer-redirection",
+                      "docs/common-errors-and-best-practices"
+                    ]
+                  },
+                  {
+                    "group": "Payment split",
+                    "pages": [
+                      "docs/payment-split-overview",
+                      "docs/split-in-single-payments",
+                      "docs/split-into-installments",
+                      "docs/split-on-subscriptions",
+                      "docs/split-in-anticipated-payments",
+                      "docs/split-query-via-interface",
+                      {
+                        "group": "Using split without API",
+                        "root": "docs/using-split-without-api",
+                        "pages": [
+                          "docs/split-in-woocommerce",
+                          "docs/split-na-pluga"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Anticipations",
+                    "pages": [
+                      "docs/introduction"
+                    ]
+                  },
+                  {
+                    "group": "Notifications",
+                    "pages": [
+                      "docs/notifications-overview",
+                      "docs/default-notifications",
+                      "docs/changing-notifications-of-a-client"
+                    ]
+                  },
+                  {
+                    "group": "Webhooks",
+                    "root": "docs/webhooks-1",
+                    "pages": [
+                      "docs/about-webhooks",
+                      "docs/create-new-webhook-via-web-application",
+                      "docs/create-new-webhook-via-api",
+                      "docs/receive-asaas-events-at-your-webhook-endpoint",
+                      "docs/how-to-implement-idempotence-in-webhooks",
+                      "docs/polling-vs-webhooks-en",
+                      {
+                        "group": "Webhook Events",
+                        "root": "docs/webhooks-events",
+                        "pages": [
+                          "docs/payment-events",
+                          "docs/subscription-events",
+                          "docs/invoices-events",
+                          "docs/transfer-events",
+                          "docs/bill-events",
+                          "docs/receivable-anticipation-events",
+                          "docs/phone-recharge-events",
+                          "docs/account-status-events",
+                          "docs/checkout-events",
+                          "docs/balance-block-events",
+                          "docs/internal-movement-events",
+                          "docs/api-key-events",
+                          "docs/events-for-automatic-pix"
+                        ]
+                      },
+                      "docs/send-types",
+                      "docs/webhooks-logs",
+                      "docs/queue-penalty",
+                      {
+                        "group": "Paused Queue",
+                        "root": "docs/webhooks-queue-paused",
+                        "pages": [
+                          "docs/how-to-reactivate-an-interrupted-queue",
+                          "docs/error-400-bad-request",
+                          "docs/error-403-forbidden",
+                          "docs/error-404-not-found",
+                          "docs/error-408-read-timed-out",
+                          "docs/error-500-internal-server-error",
+                          "docs/connect-timed-out-error",
+                          "docs/other-errors"
+                        ]
+                      },
+                      "docs/cloudflare-firewall-blocking-1",
+                      "docs/official-asaas-ips",
+                      "docs/webhooks-faq"
+                    ]
+                  },
+                  {
+                    "group": "Transfers",
+                    "pages": [
+                      "docs/transfers-overview",
+                      "docs/transfer-to-accounts-at-another-institution-pix-ted",
+                      "docs/transfer-to-asaas-account",
+                      "docs/mechanism-for-validating-transfers-via-webhooks"
+                    ]
+                  },
+                  {
+                    "group": "Invoices",
+                    "pages": [
+                      "docs/invoices-overview",
+                      "docs/configure-tax-information",
+                      "docs/issuing-service-invoices",
+                      "docs/piscofins-withholding-settings-and-tax-status"
+                    ]
+                  },
+                  {
+                    "group": "Subaccounts",
+                    "pages": [
+                      "docs/creating-subaccounts",
+                      "docs/creating-baas-subaccounts",
+                      "docs/onboarding-and-sending-documents-via-link",
+                      "docs/detailed-subaccount-approval-flow",
+                      "docs/annual-business-data-confirmation-for-subaccounts",
+                      "docs/change-the-name-of-a-business-subaccount-via-api",
+                      "docs/sub-account-api-key-management",
+                      "docs/closing-non-baas-subaccounts",
+                      "docs/faq-evaluation-period"
+                    ]
+                  },
+                  {
+                    "group": "Escrow Account",
+                    "pages": [
+                      "docs/introduction-2",
+                      "docs/enabling-the-escrow-account-for-subaccounts",
+                      "docs/fee-charging-per-configured-subaccount",
+                      "docs/funds-guaranteed-by-the-escrow-account",
+                      "docs/release-of-guaranteed-funds",
+                      "docs/disabling-the-escrow-account"
+                    ]
+                  },
+                  {
+                    "group": "Plugins/Modules/Partners",
+                    "root": "docs/pluginsmodules",
+                    "pages": [
+                      {
+                        "group": "Shopify",
+                        "root": "docs/shopify-1",
+                        "pages": [
+                          "docs/bank-payment-slip",
+                          "docs/pix-5",
+                          "docs/credit-card-1",
+                          "docs/general-settings",
+                          "docs/frequently-asked-questions-1"
+                        ]
+                      },
+                      {
+                        "group": "Woocommerce",
+                        "root": "docs/woocommerce",
+                        "pages": [
+                          "docs/installing-the-plugin-woocommerce-asaas",
+                          "docs/initial-settings",
+                          "docs/payment-methods",
+                          "docs/common-questions-woocommerce-asaas",
+                          "docs/woocommerce-subscriptions",
+                          "docs/woocommerce-webhooks",
+                          "docs/common-errors",
+                          "docs/payment-splitting-in-woocommerce",
+                          "docs/faq-woocommerce-1"
+                        ]
+                      },
+                      {
+                        "group": "NF-e Issuer for WooCommerce - Base ERP",
+                        "root": "docs/nf-e-issuer-for-woocommerce-base-erp",
+                        "pages": [
+                          "docs/installationconfiguration",
+                          "docs/product-registrationlinking"
+                        ]
+                      },
+                      {
+                        "group": "NuvemShop",
+                        "root": "docs/nuvemshop-1",
+                        "pages": [
+                          "docs/installing-the-module",
+                          "docs/initial-settings-1",
+                          "docs/faq-1"
+                        ]
+                      },
+                      {
+                        "group": "Magento",
+                        "root": "docs/magento-1",
+                        "pages": [
+                          "docs/installing-the-module-1",
+                          "docs/initial-settings-2",
+                          "docs/faq-magento-1"
+                        ]
+                      },
+                      {
+                        "group": "Pluga",
+                        "root": "docs/pluga-1",
+                        "pages": [
+                          "docs/introduction-3",
+                          "docs/asaas-split-on-pluga"
+                        ]
+                      },
+                      {
+                        "group": "Digital Manager Guru",
+                        "root": "docs/digital-manager-guru-1",
+                        "pages": [
+                          "docs/introduction-4"
+                        ]
+                      },
+                      {
+                        "group": "Make/Integromat",
+                        "root": "docs/makeintegromat",
+                        "pages": [
+                          "docs/advantages-features",
+                          "docs/templates-1",
+                          "docs/create-a-one-time-charge-from-a-google-sheets-row",
+                          "docs/create-a-subscription-from-a-google-sheets-row",
+                          "docs/create-an-installment-payment-from-a-google-sheets-row"
+                        ]
+                      },
+                      {
+                        "group": "N8N",
+                        "root": "docs/n8n-1",
+                        "pages": [
+                          "docs/installation"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Frequently asked questions",
+                    "pages": [
+                      "docs/subscriptions",
+                      "docs/authentication",
+                      "docs/customers",
+                      "docs/payments-1",
+                      "docs/api-limits-1",
+                      "docs/notifications-1",
+                      "docs/installments",
+                      "docs/pix-4",
+                      "docs/sandbox-1",
+                      "docs/security",
+                      "docs/split",
+                      "docs/subaccounts-1",
+                      "docs/transfers-1",
+                      "docs/webhooks-3",
+                      "docs/tokenization"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "API Reference",
+            "icon": "code",
+            "groups": [
+              {
+                "group": "API Reference",
+                "pages": [
+                  "reference/about-this-doc",
+                  "reference/http-response-codes",
+                  "reference/listing-and-pagination",
+                  "reference/api-limits",
+                  "reference/como-testar-as-chamadas-aqui-na-documentação-copy",
+                  {
+                    "group": "Customer",
+                    "pages": [
+                      "reference/create-new-customer",
+                      "reference/list-customers",
+                      "reference/retrieve-a-single-customer",
+                      "reference/update-existing-customer",
+                      "reference/remove-customer",
+                      "reference/restore-removed-customer",
+                      "reference/retrieve-notifications-from-a-customer"
+                    ]
+                  },
+                  {
+                    "group": "Payment",
+                    "pages": [
+                      "reference/create-new-payment",
+                      "reference/list-payments",
+                      "reference/create-new-payment-with-credit-card",
+                      "reference/capture-payment-with-pre-authorization",
+                      "reference/pay-a-charge-with-credit-card",
+                      "reference/retrieve-payment-billing-information",
+                      "reference/payment-viewing-information",
+                      "reference/retrieve-a-single-payment",
+                      "reference/update-existing-payment",
+                      "reference/delete-payment",
+                      "reference/restore-removed-payment",
+                      "reference/retrieve-status-of-a-payment",
+                      "reference/refund-payment",
+                      "reference/get-digitable-bill-line",
+                      "reference/get-qr-code-for-pix-payments",
+                      "reference/confirm-cash-receipt",
+                      "reference/undo-cash-receipt-confirmation",
+                      "reference/sales-simulator",
+                      "reference/recovering-payment-limits",
+                      "reference/pay-a-charge-with-card"
+                    ]
+                  },
+                  {
+                    "group": "Credit Card",
+                    "pages": [
+                      "reference/credit-card-tokenization",
+                      "reference/save-or-update-pre-authorization-configuration",
+                      "reference/retrieve-pre-authorization-configuration"
+                    ]
+                  },
+                  {
+                    "group": "Installment",
+                    "pages": [
+                      "reference/create-installment",
+                      "reference/list-installments",
+                      "reference/create-installment-with-credit-card",
+                      "reference/retrieve-a-single-installment",
+                      "reference/remove-installment",
+                      "reference/list-payments-of-a-installment",
+                      "reference/generate-installment-booklet",
+                      "reference/refund-installment",
+                      "reference/update-installment-splits",
+                      "reference/cancel-charges-of-an-installment"
+                    ]
+                  },
+                  {
+                    "group": "Anticipation",
+                    "pages": [
+                      "reference/retrieve-a-single-anticipation",
+                      "reference/request-anticipation",
+                      "reference/list-anticipations",
+                      "reference/simulate-anticipation",
+                      "reference/update-status-of-automatic-anticipation",
+                      "reference/retrieve-status-of-automatic-anticipation",
+                      "reference/retrieve-anticipation-limits",
+                      "reference/cancel-anticipation"
+                    ]
+                  },
+                  {
+                    "group": "Payment with summary data",
+                    "pages": [
+                      "reference/create-new-payment-with-summary-data-in-response",
+                      "reference/list-payments-with-summary-data",
+                      "reference/create-new-payment-with-credit-card-with-summary-data-in-response",
+                      "reference/capture-payment-with-pre-authorization-with-summary-data-in-response",
+                      "reference/retrieve-a-single-payment-with-summary-data",
+                      "reference/update-existing-payment-with-summary-data-in-response",
+                      "reference/delete-payment-with-summary-data",
+                      "reference/restore-removed-payment-with-summary-data-in-response",
+                      "reference/refund-payment-with-summary-data-in-response",
+                      "reference/confirm-cash-receipt-with-summary-data-in-response",
+                      "reference/undo-cash-receipt-confirmation-with-summary-data-in-response"
+                    ]
+                  },
+                  {
+                    "group": "Payment Document",
+                    "pages": [
+                      "reference/upload-payment-documents",
+                      "reference/list-documents-of-a-payment",
+                      "reference/update-settings-of-a-document-of-a-payment",
+                      "reference/retrieve-a-single-document-of-a-payment",
+                      "reference/delete-document-from-a-payment"
+                    ]
+                  },
+                  {
+                    "group": "Subscription",
+                    "pages": [
+                      "reference/create-new-subscription",
+                      "reference/list-subscriptions",
+                      "reference/create-subscription-with-credit-card",
+                      "reference/retrieve-a-single-subscription",
+                      "reference/update-existing-subscription",
+                      "reference/remove-subscription",
+                      "reference/update-subscription-credit-card",
+                      "reference/list-payments-of-a-subscription",
+                      "reference/generate-subscription-booklet",
+                      "reference/create-configuration-for-issuance-of-invoices",
+                      "reference/retrieve-configuration-for-issuance-of-invoices",
+                      "reference/remove-configuration-for-issuance-of-invoices",
+                      "reference/update-configuration-for-issuance-of-invoices",
+                      "reference/list-invoices-for-subscription-charges"
+                    ]
+                  },
+                  {
+                    "group": "Notification",
+                    "pages": [
+                      "reference/update-existing-notification",
+                      "reference/update-existing-notifications-in-batch"
+                    ]
+                  },
+                  {
+                    "group": "Payment Link",
+                    "pages": [
+                      "reference/create-a-payments-link",
+                      "reference/list-payments-links",
+                      "reference/update-a-payments-link",
+                      "reference/retrieve-a-single-payments-link",
+                      "reference/remove-a-payments-link",
+                      "reference/restore-a-payments-link",
+                      "reference/add-an-image-to-a-payments-link",
+                      "reference/list-images-from-a-payments-link",
+                      "reference/retrieve-a-single-payments-link-image",
+                      "reference/remove-an-image-from-payments-link",
+                      "reference/set-payments-link-main-image"
+                    ]
+                  },
+                  {
+                    "group": "Checkout",
+                    "pages": [
+                      "reference/create-new-checkout",
+                      "reference/cancel-a-checkout"
+                    ]
+                  },
+                  {
+                    "group": "Payment Refund",
+                    "pages": [
+                      "reference/retrieve-refunds-of-a-single-payment",
+                      "reference/refund-bank-slip"
+                    ]
+                  },
+                  {
+                    "group": "Chargeback",
+                    "pages": [
+                      "reference/create-a-chargeback-dispute",
+                      "reference/list-chargebacks",
+                      "reference/retrieve-a-single-chargeback"
+                    ]
+                  },
+                  {
+                    "group": "Payment Split",
+                    "pages": [
+                      "reference/retrieve-a-single-paid-split",
+                      "reference/list-paid-splits-1",
+                      "reference/retrieve-a-single-received-split",
+                      "reference/list-received-splits-1"
+                    ]
+                  },
+                  {
+                    "group": "Escrow Account",
+                    "pages": [
+                      "reference/save-or-update-escrow-account-configuration-for-subaccount",
+                      "reference/create-default-escrow-account-configuration-to-all-subaccounts",
+                      "reference/finish-payment-escrow-in-the-escrow-account",
+                      "reference/reterive-escrow-account-configuration-for-subaccount",
+                      "reference/retrieve-default-escrow-account-configuration",
+                      "reference/retrieve-payment-escrow-in-the-escrow-account"
+                    ]
+                  },
+                  {
+                    "group": "Transfer",
+                    "pages": [
+                      "reference/transfer-to-another-institution-account-or-pix-key",
+                      "reference/list-transfers",
+                      "reference/transfer-to-asaas-account-1",
+                      "reference/retrieve-a-single-transfer",
+                      "reference/cancel-a-transfer"
+                    ]
+                  },
+                  {
+                    "group": "Credit Bureau Report",
+                    "pages": [
+                      "reference/make-consultation",
+                      "reference/list-credit-bureau-reports",
+                      "reference/retrieve-a-credit-bureau-report"
+                    ]
+                  },
+                  {
+                    "group": "Payment Dunning",
+                    "pages": [
+                      "reference/create-a-payment-dunning",
+                      "reference/list-payment-dunnings",
+                      "reference/simulate-a-payment-dunning",
+                      "reference/recover-a-single-payment-dunning",
+                      "reference/event-history-lists",
+                      "reference/list-payments-received",
+                      "reference/list-payments-available-for-payment-dunning",
+                      "reference/resend-documents",
+                      "reference/cancel-payment-dunning"
+                    ]
+                  },
+                  {
+                    "group": "Bill",
+                    "pages": [
+                      "reference/create-a-bill-payment",
+                      "reference/list-bill-payments",
+                      "reference/simulate-a-bill-payment",
+                      "reference/retrieve-a-single-bill-payment",
+                      "reference/cancel-bill-payment"
+                    ]
+                  },
+                  {
+                    "group": "Finance",
+                    "pages": [
+                      "reference/retrieve-account-balance",
+                      "reference/billing-statistics",
+                      "reference/retrieve-split-values"
+                    ]
+                  },
+                  {
+                    "group": "Fiscal Info",
+                    "pages": [
+                      "reference/list-municipal-configurations",
+                      "reference/create-and-update-tax-information",
+                      "reference/retrieve-tax-information",
+                      "reference/list-municipal-services",
+                      "reference/list-nbs-codes",
+                      "reference/configure-invoice-issuing-portal",
+                      "reference/list-federal-service-codes",
+                      "reference/list-operation-indicator-codes",
+                      "reference/list-tax-classification-codes",
+                      "reference/list-tax-situation-codes"
+                    ]
+                  },
+                  {
+                    "group": "Invoice",
+                    "pages": [
+                      "reference/schedule-invoice",
+                      "reference/list-invoices",
+                      "reference/update-invoice",
+                      "reference/retrieve-a-single-invoice",
+                      "reference/issue-an-invoice",
+                      "reference/cancel-an-invoice"
+                    ]
+                  },
+                  {
+                    "group": "Pix",
+                    "pages": [
+                      "reference/create-a-key",
+                      "reference/list-keys",
+                      "reference/retrieve-a-single-key",
+                      "reference/remove-key-1",
+                      "reference/create-static-qrcode",
+                      "reference/delete-static-qrcode",
+                      "reference/available-token-bucket-check",
+                      "reference/check-pix-key"
+                    ]
+                  },
+                  {
+                    "group": "Automatic Pix",
+                    "pages": [
+                      "reference/create-automatic-pix-payment-instruction-retry",
+                      "reference/create-an-automatic-pix-authorization",
+                      "reference/list-automatic-pix-authorizations",
+                      "reference/retrieve-a-single-automatic-pix-authorization",
+                      "reference/cancel-an-automatic-pix-authorization",
+                      "reference/retrieve-a-single-automatic-pix-payment-instruction",
+                      "reference/list-automatic-pix-payment-instructions"
+                    ]
+                  },
+                  {
+                    "group": "Subaccount",
+                    "pages": [
+                      "reference/create-subaccount",
+                      "reference/list-subaccounts",
+                      "reference/retrieve-a-single-subaccount",
+                      "reference/create-api-key-for-subaccount",
+                      "reference/list-api-keys-for-subaccount",
+                      "reference/update-api-key-for-a-subaccount",
+                      "reference/delete-api-key-for-a-subaccount",
+                      "reference/close-non-baas-subaccount"
+                    ]
+                  },
+                  {
+                    "group": "Pix Transaction",
+                    "pages": [
+                      "reference/pay-a-qrcode",
+                      "reference/decode-a-qrcode-for-payment",
+                      "reference/retrieve-a-single-transaction",
+                      "reference/list-transactions",
+                      "reference/cancel-a-scheduled-transaction"
+                    ]
+                  },
+                  {
+                    "group": "Recurring Pix",
+                    "pages": [
+                      "reference/list-recurrences",
+                      "reference/retrieve-a-single-recurrence",
+                      "reference/cancel-a-recurrence",
+                      "reference/list-recurrence-items",
+                      "reference/cancel-a-recurrence-item"
+                    ]
+                  },
+                  {
+                    "group": "Webhook",
+                    "pages": [
+                      "reference/create-new-webhook",
+                      "reference/list-webhooks",
+                      "reference/retrieve-a-single-webhook",
+                      "reference/update-existing-webhook",
+                      "reference/remove-webhook",
+                      "reference/remove-webhook-backoff"
+                    ]
+                  },
+                  {
+                    "group": "Mobile Phone Recharge",
+                    "pages": [
+                      "reference/request-recharge",
+                      "reference/list-mobile-recharges",
+                      "reference/recover-a-single-cellphone-recharge",
+                      "reference/cancel-a-cellphone-recharge",
+                      "reference/search-for-cell-phone-provider"
+                    ]
+                  },
+                  {
+                    "group": "Financial Transaction",
+                    "pages": [
+                      "reference/retrieve-extract"
+                    ]
+                  },
+                  {
+                    "group": "Account info",
+                    "pages": [
+                      "reference/retrieve-business-data",
+                      "reference/update-business-data",
+                      "reference/save-payment-checkout-personalization",
+                      "reference/resend-activation-link-for-non-baas-subaccount",
+                      "reference/retrieve-personalization-settings",
+                      "reference/retrieve-asaas-account-number",
+                      "reference/retrieve-account-fees",
+                      "reference/check-account-registration-status",
+                      "reference/retrieve-walletid",
+                      "reference/delete-baas-subaccount"
+                    ]
+                  },
+                  {
+                    "group": "Account Document",
+                    "pages": [
+                      "reference/check-pending-documents",
+                      "reference/send-documents",
+                      "reference/view-document-sent",
+                      "reference/update-sent-document",
+                      "reference/remove-sent-document"
+                    ]
+                  },
+                  {
+                    "group": "Sandbox Actions",
+                    "pages": [
+                      "reference/approve-account",
+                      "reference/confirm-payment",
+                      "reference/force-expire"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "navbar": {},
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
+  },
+  "footer": {
+    "socials": {
+      "youtube": "https://www.youtube.com/@CamoAg/videos",
+      "linkedin": "https://www.linkedin.com/company/camoag"
+    }
+  }
+}
