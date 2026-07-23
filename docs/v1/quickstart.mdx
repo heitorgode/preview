@@ -1,0 +1,133 @@
+---
+title: Quick Start Guide
+---
+
+This guide explains how to access the Xe Currency Data API directly through your web browser. It's written for a non-technical audience — for details on integrating Xe Currency Data with your software, refer to the API Reference.
+
+## How can I access the API through my web browser?
+
+The API can be easily accessed through your web browser. Decide on which type of request you would like to make and the results can be returned directly in your browser. Detailed instructions can be found below.
+
+## Step 1 — Build your API request URL
+
+Select the request type you wish to make and build your URL. Instructions for each request type are listed below.
+
+### Request Type: Currencies List
+
+Access a list of all available currencies (without rates).
+
+**Sample URL:** `https://xecdapi.xe.com/v1/currencies.json/?obsolete=true`
+
+| Component | Description |
+| --- | --- |
+| `xecdapi.xe.com` | This is the domain you must use to access the API |
+| `v1` | This is the API version number. Our API is currently on version 1. |
+| `currencies` | This is the type of request you want to make. |
+| `.json/` | This defines the format of your data. Supported formats are: `.json`, `.csv`, or `.xml` |
+| `?obsolete=true` | This optional parameter returns active and obsolete currencies. |
+
+### Request Type: Convert From
+
+Convert from one base currency to one or multiple counter currencies.
+
+**Example:** Convert 110.23 CAD to USD and GBP.
+
+<Note>Each rate returned counts as one API request towards your monthly limit.</Note>
+
+**Sample URL:** `https://xecdapi.xe.com/v1/convert_from.json/?from=CAD&to=USD,GBP&amount=110.23`
+
+| Component | Description |
+| --- | --- |
+| `xecdapi.xe.com` | This is the domain you must use to access the API |
+| `v1` | This is the API version number. API is currently on version 1. |
+| `convert_from` | This is the type of request you want to make. |
+| `.json/` | This defines the format of your data. Supported formats are: `.json`, `.csv`, or `.xml` |
+| `/?from=CAD` | This is the base currency you want to convert an amount from. |
+| `&to=USD,GBP` | These are the currencies you want to convert to. Use commas to separate multiple currencies. |
+| `&amount=110.23` | This is the amount you want to convert from. |
+
+### Request Type: Convert To
+
+Convert to a currency amount from multiple other currencies.
+
+**Example:** Determine how much USD and EUR you need to get $1,000 CAD.
+
+<Note>Each rate returned counts as one API request towards your monthly limit.</Note>
+
+**Sample URL:** `https://xecdapi.xe.com/v1/convert_to.json/?to=CAD&from=USD,EUR&amount=1000`
+
+| Component | Description |
+| --- | --- |
+| `xecdapi.xe.com` | This is the domain you must use to access the API |
+| `v1` | This is the API version number. API is currently on version 1. |
+| `convert_to` | This is the type of request you want to make. |
+| `.json/` | This defines the format of your data. Supported formats are: `.json`, `.csv`, or `.xml` |
+| `/?to=CAD` | This is the currency you want to convert to. |
+| `&from=USD,EUR` | These are the currencies you want to convert from. Use commas to separate multiple currencies. |
+| `&amount=1000` | This is the amount you want to convert to. |
+
+### Request Type: Historic Rate
+
+Get the historic rate for one base currency against one or more counter currencies.
+
+**Example:** Convert $150 from USD to CAD and JPY for May 5th, 2011.
+
+<Note>Each rate returned counts as one API request towards your monthly limit.</Note>
+
+**Sample URL:** `https://xecdapi.xe.com/v1/historic_rate.json/?from=USD&date=2011-03-05&to=CAD,JPY&amount=150`
+
+| Component | Description |
+| --- | --- |
+| `xecdapi.xe.com` | This is the domain you must use to access the API |
+| `v1` | This is the API version number. API is currently on version 1. |
+| `historic_rate` | This is the type of request you want to make. |
+| `.json/` | This defines the format of your data. Supported formats are: `.json`, `.csv`, or `.xml` |
+| `/?from=USD` | This is the currency you want to convert from. |
+| `&date=2011-03-05` | This is the date you want the rates as of. `YYYY-MM-DD` |
+| `&to=CAD,JPY` | These are the currencies you want to convert to. Use commas to separate multiple currencies. |
+| `&amount=150` | This is the amount you want to convert. |
+
+## Step 2 — Submit your URL and API credentials
+
+Input your request URL into your browser and enter your credentials. Enter your Account ID into the *Name* field and your API Key into the *Password* field. These details are provided to you when you sign up for the service.
+
+## Step 3 — Access your API results
+
+Results from your API request will appear in your browser. Below are sample API results in each of the supported formats.
+
+### .json format sample
+
+```json
+{"terms":"http://www.xe.com/legal/dfs.php","privacy":"http://www.xe.com/privacy.php","from":"CAD","amount":110.23,"timestamp":"2015-02-03T18:59:00Z","to":[{"quotecurrency":"GBP","mid":58.613971224738464},{"quotecurrency":"USD","mid":88.85570989972662}]}
+```
+
+### .csv format sample
+
+```csv
+Terms,http://www.xe.com/privacy.php,Privacy,http://www.xe.com/legal/dfs.php
+from,amount,timestamp,quotecurrency,mid
+CAD,110.23,2015-02-10T09:00:00Z,GBP,57.94603144
+CAD,110.23,2015-02-10T09:00:00Z,USD,88.29417549
+```
+
+### .xml format sample
+
+```xml
+<convertFrom xmlns="http://xecdapi.xe.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://xecdapi.xe.com/schema/v1/convertFrom.xsd">
+  <terms>http://www.xe.com/privacy.php</terms>
+  <privacy>http://www.xe.com/legal/dfs.php</privacy>
+  <from>CAD</from>
+  <amount>110.23</amount>
+  <timestamp>2015-02-10T09:00:00Z</timestamp>
+  <to>
+    <rate>
+      <currency>GBP</currency>
+      <mid>57.9460314353</mid>
+    </rate>
+    <rate>
+      <currency>USD</currency>
+      <mid>88.2941754937</mid>
+    </rate>
+  </to>
+</convertFrom>
+```

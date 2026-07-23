@@ -1,0 +1,13 @@
+---
+title: Authentication
+---
+
+The Xe Currency Data API uses your account ID and API key to authenticate requests. You can obtain your account ID and API key from your Dashboard at [https://currencydata.xe.com/account/dashboard](https://currencydata.xe.com/account/dashboard)
+
+The API uses HTTP Basic Access Authentication, which requires that a properly constructed «Authorization» header be included in your HTTP request. This header will need to include your Xe Currency Data API account ID and API key in an encoded form.
+
+Authentication Example Using the «curl» Utility:
+
+```sh
+curl –i -u account_id:api_key "https://xecdapi.xe.com/v1/account_info/"
+```

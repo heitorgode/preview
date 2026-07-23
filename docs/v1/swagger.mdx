@@ -1,0 +1,20 @@
+---
+title: SDK Generator
+---
+
+When integrating with Xe Currency Data API, you can use the [Open API v2 YAML file](/files/swagger.yaml) and the [Swagger CodeGen](https://github.com/swagger-api/swagger-codegen) open source application to generate API client libraries and server stubs.
+
+To use Swagger Codegen, follow the readme, specifically the [prerequisites](https://github.com/swagger-api/swagger-codegen#prerequisites) and [getting started](https://github.com/swagger-api/swagger-codegen#getting-started) sections.
+
+Once you have the prerequisites, you can generate client libraries and server stubs by following the instructions in the [generators](https://github.com/swagger-api/swagger-codegen#getting-started) section.
+
+For example, to generate a Java client:
+
+```sh
+java -cp output/myLibrary/target/myClientCodegen-swagger-codegen-1.0.0.jar:modules/swagger-codegen-cli/target/swagger-codegen-cli.jar \
+  io.swagger.codegen.SwaggerCodegen generate -l java\
+  -i https://xecdapi.xe.com/docs/v1/swagger.json \
+  -o xecdJavaClient
+```
+
+You can then take the output in xecdJavaClient and incorporate into your application.

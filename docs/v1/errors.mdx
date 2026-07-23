@@ -1,0 +1,31 @@
+---
+title: Errors & Exceptions
+---
+
+Xe uses conventional HTTP response codes to indicate the success or failure of an API request, in general:
+
+- Codes in the `2xx` range indicate success.
+- Codes in the `4xx` range indicate an error that failed given the information provided.
+- Codes in the `5xx` range indicate an error with Xe's platform.
+
+## HTTP Status Code Summary
+
+| HTTP Error Code | Description |
+| --- | --- |
+| **200 — OK** | Everything worked. |
+| **400 — Bad Request** | The request was not accepted, often due to validation or missing parameters. |
+| **401 — Unauthorized** | Username/password not valid. |
+| **404 — Not Found** | The requested resource does not exist. |
+| **429 — Throttle Error** | Over 900 requests per 15 minutes. |
+| **500 — Server Errors** | Something went wrong on Xe's platform. |
+
+### Examples of API errors
+
+| Scenario | Details | Message |
+| --- | --- | --- |
+| **Authentication Invalid Credentials** | XECD API will return 401 Unauthorized Message | \{ code: 1, message: Bad credentials, documentation\_url:[https://xecdapi.xe.com/docs/v1/](https://xecdapi.xe.com/docs/v1/) } |
+| **Monthly Rate Request Limit Exceeded** | Occurs when the account has exceeded allotted rate requests for the month. | \{ code: 3, message: Monthly rate limit exceeded., documentation\_url: [https://xecdapi.xe.com/docs/v1/](https://xecdapi.xe.com/docs/v1/) } |
+| **No Rates for Requested Currency and Date** | No Rates for Requested Currency and Date | \{ code: 7, message: No \{0} found on \{1}, documentation\_url: [https://xecdapi.xe.com/docs/v1/](https://xecdapi.xe.com/docs/v1/) }, where \{0} is the currency and \{1} is the date/time in the format yyyy-MM-dd'T'HH: mm: ssZ |
+| **Free Trial Ended** | Occurs when a user attempts to access XECD API with an account where the free trial period has ended | \{ code: 9, message: Free trial ended, documentation\_url: [https://xecdapi.xe.com/docs/v1/](https://xecdapi.xe.com/docs/v1/) } |
+| **No Rates Available on requested dates** | This alert will be returned when there are no rates available for the requested range of date/times. | \{ code: 10, message: No rates available between \{0} and \{1}, documentation\_url: [https://xecdapi.xe.com/docs/v1/](https://xecdapi.xe.com/docs/v1/) }, where \{0} and \{1} are replaced by the start and end date/times in the format yyyy-MM-dd'T'HH: mm: ssZ |
+| **Invalid Year** | Occurs when an invalid year is specified | \{ code: 14, message: Year \{0} is invalid, documentation\_url: [https://xecdapi.xe.com/docs/v1/](https://xecdapi.xe.com/docs/v1/) } |
