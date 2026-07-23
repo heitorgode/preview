@@ -8,8 +8,8 @@
   },
   "name": "XE Currency Data",
   "logo": {
-    "light": "/images/logo_light.svg",
-    "dark": "/images/logo_dark.svg",
+    "light": "/images/logo_with_text_light.svg",
+    "dark": "/images/logo_with_text_dark.svg",
     "href": "/"
   },
   "colors": {
